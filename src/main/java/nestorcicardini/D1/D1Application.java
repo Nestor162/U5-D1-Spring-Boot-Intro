@@ -33,6 +33,11 @@ public class D1Application {
 		System.out.println();
 		log.info("--- Toppings ---");
 		log.info(context.getBean("cheese", Topping.class).showCompleteInfo());
+		log.info(context.getBean("ham", Topping.class).showCompleteInfo());
+		log.info(context.getBean("onions", Topping.class).showCompleteInfo());
+		log.info(
+				context.getBean("pineapple", Topping.class).showCompleteInfo());
+		log.info(context.getBean("salami", Topping.class).showCompleteInfo());
 
 		context.close();
 	}

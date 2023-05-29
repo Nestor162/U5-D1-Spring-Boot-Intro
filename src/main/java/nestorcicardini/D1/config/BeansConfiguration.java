@@ -34,7 +34,7 @@ public class BeansConfiguration {
 		return new Topping("onions", 0.69, 22);
 	}
 
-	@Bean(name = "pinapple")
+	@Bean(name = "pineapple")
 	Topping pineapple() {
 		return new Topping("pineapple", 0.79, 24);
 	}
