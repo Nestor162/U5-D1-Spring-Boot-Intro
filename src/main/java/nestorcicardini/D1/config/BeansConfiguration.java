@@ -34,9 +34,9 @@ public class BeansConfiguration {
 		return new Topping("onions", 0.69, 22);
 	}
 
-	@Bean(name = "pinaple")
-	Topping pinaple() {
-		return new Topping("pinaple", 0.79, 24);
+	@Bean(name = "pinapple")
+	Topping pineapple() {
+		return new Topping("pineapple", 0.79, 24);
 	}
 
 	@Bean(name = "salami")
@@ -45,11 +45,37 @@ public class BeansConfiguration {
 	}
 
 	// PIZZE
-	@Bean(name = "Pizza Margherita")
+
+	@Bean(name = "pizzaMargherita")
 	Product getPizzaMargherita() {
 		List<Topping> listaToppings = new ArrayList<>();
 		listaToppings.add(tomato());
 		listaToppings.add(cheese());
 		return new Pizza("Pizza Margherita", 4.99, 1104, listaToppings, "sm");
+	}
+
+	@Bean(name = "hawaiianPizza")
+	Product getHawaiianPizza() {
+		List<Topping> listaToppings = new ArrayList<>();
+		listaToppings.add(tomato());
+		listaToppings.add(cheese());
+		listaToppings.add(ham());
+		listaToppings.add(pineapple());
+		return new Pizza("Hawaiian Pizza", 6.49, 1024, listaToppings, "sm");
+	}
+
+	@Bean(name = "familyPizza")
+	Product getFamilyPizza() {
+		List<Topping> listaToppings = new ArrayList<>();
+		return new Pizza("Family Pizza", 4.15, 1.95, listaToppings, "lg");
+	}
+
+	@Bean(name = "salamiPizza")
+	Product getSalamiPizza() {
+		List<Topping> listaToppings = new ArrayList<>();
+		listaToppings.add(tomato());
+		listaToppings.add(cheese());
+		listaToppings.add(salami());
+		return new Pizza("Salami Pizza", 6.49, 1024, listaToppings, "sm");
 	}
 }

@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import lombok.extern.slf4j.Slf4j;
-import nestorcicardini.D1.entities.Pizza;
 
 @Slf4j
 @SpringBootApplication
@@ -25,8 +24,13 @@ public class D1Application {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
 				D1Application.class);
 
-		Pizza pizzaMargherita = (Pizza) context.getBean("Pizza Margherita");
-		log.info(pizzaMargherita.toString());
+		log.info(context.getBean("pizzaMargherita").toString());
+		log.info(context.getBean("hawaiianPizza").toString());
+		log.info(context.getBean("salamiPizza").toString());
+		log.info(context.getBean("familyPizza").toString());
+
+		System.out.println();
+		log.info("--- Toppings ---");
 
 		context.close();
 	}
