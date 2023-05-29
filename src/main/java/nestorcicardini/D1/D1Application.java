@@ -39,6 +39,14 @@ public class D1Application {
 				context.getBean("pineapple", Topping.class).showCompleteInfo());
 		log.info(context.getBean("salami", Topping.class).showCompleteInfo());
 
+		System.out.println();
+		log.info("--- Drinks ---");
+		log.info(context.getBean("lemonade").toString());
+		log.info(context.getBean("water").toString());
+		log.info(context.getBean("wine").toString());
+
+		System.out.println();
+
 		context.close();
 	}
 

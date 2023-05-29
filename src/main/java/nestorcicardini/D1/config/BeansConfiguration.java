@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import nestorcicardini.D1.entities.Drink;
 import nestorcicardini.D1.entities.Pizza;
 import nestorcicardini.D1.entities.Product;
 import nestorcicardini.D1.entities.Topping;
@@ -77,5 +78,21 @@ public class BeansConfiguration {
 		listaToppings.add(cheese());
 		listaToppings.add(salami());
 		return new Pizza("Salami Pizza", 6.49, 1024, listaToppings, "sm");
+	}
+
+	// Drinks
+	@Bean
+	Drink lemonade() {
+		return new Drink("Lemonade", 1.29, 128);
+	}
+
+	@Bean
+	Drink water() {
+		return new Drink("Water", 1.29, 0);
+	}
+
+	@Bean
+	Drink wine() {
+		return new Drink("Wine", 7.49, 607);
 	}
 }
