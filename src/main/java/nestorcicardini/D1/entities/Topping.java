@@ -17,4 +17,9 @@ public class Topping extends Product {
 		return getName();
 	}
 
+	public String showCompleteInfo() {
+		return getName() + "\t Price: " + getPrice() + " Calories: "
+				+ getCalories();
+	}
+
 }

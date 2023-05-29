@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import lombok.extern.slf4j.Slf4j;
+import nestorcicardini.D1.entities.Topping;
 
 @Slf4j
 @SpringBootApplication
@@ -31,6 +32,7 @@ public class D1Application {
 
 		System.out.println();
 		log.info("--- Toppings ---");
+		log.info(context.getBean("cheese", Topping.class).showCompleteInfo());
 
 		context.close();
 	}
