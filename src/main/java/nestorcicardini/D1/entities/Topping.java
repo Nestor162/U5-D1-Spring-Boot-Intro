@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Topping extends Product {
-	public Topping(String name, double price, int calories) {
+	public Topping(String name, double price, double calories) {
 		super(name, price, calories);
 	}
 

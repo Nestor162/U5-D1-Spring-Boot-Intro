@@ -13,7 +13,7 @@ public class Pizza extends Product {
 	private List<Topping> toppings;
 	private String size;
 
-	public Pizza(String name, double price, int calories,
+	public Pizza(String name, double price, double calories,
 			List<Topping> toppings, String size) {
 		super(name, price, calories);
 		this.toppings = toppings;
@@ -23,8 +23,7 @@ public class Pizza extends Product {
 	@Override
 	public String toString() {
 		return getName() + " (" + toppings + ") " + "\t" + "Price: "
-				+ getPrice() + " " + "Calories: " + getCalories() + " "
-				+ System.lineSeparator();
+				+ getPrice() + " " + "Calories: " + getCalories();
 	}
 
 }
