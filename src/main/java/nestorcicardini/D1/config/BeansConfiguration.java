@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import nestorcicardini.D1.entities.Drink;
+import nestorcicardini.D1.entities.Merchandise;
 import nestorcicardini.D1.entities.Pizza;
 import nestorcicardini.D1.entities.Product;
 import nestorcicardini.D1.entities.Topping;
@@ -94,5 +95,16 @@ public class BeansConfiguration {
 	@Bean
 	Drink wine() {
 		return new Drink("Wine", 7.49, 607);
+	}
+
+	// Franchise
+	@Bean
+	Merchandise shirt() {
+		return new Merchandise("Shirt", 21.99, 0);
+	}
+
+	@Bean
+	Merchandise mug() {
+		return new Merchandise("Mug", 21.99, 0);
 	}
 }

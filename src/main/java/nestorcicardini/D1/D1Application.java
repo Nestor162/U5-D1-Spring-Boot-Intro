@@ -46,6 +46,9 @@ public class D1Application {
 		log.info(context.getBean("wine").toString());
 
 		System.out.println();
+		log.info("--- Franchise ---");
+		log.info(context.getBean("shirt").toString());
+		log.info(context.getBean("mug").toString());
 
 		context.close();
 	}
